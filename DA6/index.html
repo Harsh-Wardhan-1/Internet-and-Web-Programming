@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>JackPot</title>
+    <script type="text/javascript">
+        function loadDoc() {
+            const num = document.getElementById("num");
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                if (num.value > 9999 || num.value < 1000) {
+                    window.alert("Enter a four digit number.")
+                    document.getElementById("textarea").innerHTML = "";
+                }
+                else if (num.value % 10 == 7) {
+                    document.getElementById("textarea").innerHTML = "You won Rs 1000.";
+                }
+                else if (num.value % 10 == 9) {
+                    document.getElementById("textarea").innerHTML = "You won Rs 3000.";
+                }
+                else {
+                    document.getElementById("textarea").innerHTML = "You won Rs 100.";
+                }
+            }
+            xhttp.open("GET", "ajax_info.txt", true);
+            xhttp.send();
+        }; 
+    </script>
+</head>
+
+<body>
+    <h1>Win a JackPot!!!</h1>
+    <p>Enter a four digit number: <input type="text" id="num"> <button id="submit" onclick="loadDoc()">Submit</button>
+    </p>
+    <p id="textarea"></p>
+</body>
+
+</html>

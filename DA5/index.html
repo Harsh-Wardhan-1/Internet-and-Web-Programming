@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Articles</title>
+    <style>
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .left,
+        .right {
+            width: 50%;
+            float: left;
+            height: 560px;
+        }
+
+        .left {
+            background-color: beige;
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right {
+            background-color: rgb(216, 171, 171);
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .content-left {
+            padding: 10px;
+        }
+
+        button {
+            width: 130px;
+        }
+
+        .news {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news">
+        <h1>News Website</h1>
+    </div>
+    <div class="left">
+        <div class="content-left">
+            <p><span>Date:</span>
+                <select name="dropdown" id="drop">
+                    <option value="09-01-2022">09-01-2022</option>
+                    <option value="10-01-2022">10-01-2022</option>
+                    <option value="11-01-2022">11-01-2022</option>
+                </select>
+            </p>
+            <button id="add">Add</button>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="content">
+            <h2 id="headline"><u>Headline:</u> The researchers using AI to analyse peer review.</h2>
+            <h4 id="author"><u>Author:</u> Richard Van Noorden</h4>
+            <p id="article">Do more-highly cited journals have higher-quality peer review? Reviews are generally
+                confidential and the
+                definition of
+                ‘quality’ is elusive, so this is a difficult question to answer. But researchers who used machine
+                learning
+                to study
+                10,000 peer-review reports in biomedical journals have tried. They invented proxy measures for quality,
+                which they term
+                thoroughness and helpfulness.
+
+                Their work, reported in a preprint article1 in July, found that reviews at journals with higher impact
+                factors seem to
+                spend more time discussing a paper’s methods but less time on suggesting improvements than do reviews at
+                lower-impact
+                journals. However, the differences between high- and low-impact journals were modest and variability was
+                high. The
+                authors say this suggests that a journal’s impact factor is “a bad predictor for the quality of review
+                of an
+                individual
+                manuscript”.
+
+
+                How to write a thorough peer review
+
+                How did you get these confidential peer-review reports?
+                The website Publons (owned by analytics firm Clarivate) has a database of millions of reviews, submitted
+                by
+                journals or
+                by academics themselves. They gave us access because they’re interested in a better understanding of
+                peer-review
+                quality.
+
+
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
